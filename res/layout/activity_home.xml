@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ToggleButton
+            android:id="@+id/tb_Home_Panic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Panic Button"
+            android:textOn="Under Panic!" />
+
+        <Button
+            android:id="@+id/apps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:onClick="showApps"
+            android:text="Show Apps" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_Home_ProgressBarTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:gravity="center"
+         android:background="@drawable/help_lay_style"
+         android:padding="15dp"
+        android:visibility="gone" > 
+       
+        <ProgressBar
+        android:id="@+id/progressBar1"
+         style="@android:style/Widget.ProgressBar.Horizontal"
+         android:indeterminate="false"
+         android:max="30"
+        android:layout_margin="8dp"
+        android:progress="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tv_Home_TimePanic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL_Home_ClockSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+          android:background="@drawable/help_lay_style"
+        android:orientation="vertical" >
+
+        <AnalogClock
+            android:id="@+id/analogClock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" 
+            android:onClick="openClockActivity"/>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_launcher" 
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="100" >
+
+        <ImageButton
+            android:id="@+id/ib_Home_Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.33"
+            android:background="@android:color/transparent"
+            android:onClick="openDialerApp"
+            android:src="@drawable/my_call1" />
+
+        <ImageButton
+            android:id="@+id/ib_Home_App_Drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.33"
+            android:background="@android:color/transparent"
+            android:onClick="showApps"
+            android:src="@drawable/my_app_drawer"
+            android:text="Show Apps" />
+
+        <ImageButton
+            android:id="@+id/ib_Home_Mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33.33"
+            android:background="@android:color/transparent"
+            android:src="@drawable/my_mic"
+            android:onClick="openVoiceAssitantActivity" />
+    </LinearLayout>
+
+   
+    
+</RelativeLayout>

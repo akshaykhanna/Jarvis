@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bdby.jarvis"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+<uses-permission android:name="android.permission.READ_SMS"/>
+<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+<uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.bdby.jarvis.HomeActivity"
+            android:label="Jarvis Home"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bdby.jarvis.AppsListActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+       
+        <activity
+            android:name="com.bdby.jarvis.ReadMySms"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_read_my_sms" 
+            >
+           
+        </activity>
+        
+         <activity
+            android:name="com.bdby.jarvis.Db_ui"
+            
+            android:label="@string/title_activity_read_my_sms" >
+             
+        </activity>
+        
+          <activity
+            android:name="com.bdby.jarvis.VoiceAssitant"
+              android:label="@string/app_name"  
+                 android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" >
+              >
+              </activity>
+              <activity
+            android:name="com.bdby.jarvis.WeatherActivity"
+              android:label="@string/app_name"  
+                 android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" 
+                   android:screenOrientation="portrait"
+                  >
+            </activity>
+            
+         <activity
+            android:name="com.bdby.jarvis.Navigation"
+              android:label="@string/app_name"  
+              >
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bdby.jarvis.TweenAnimationActivity"
+              android:label="@string/app_name"  
+              >
+           
+        </activity>
+        
+        <service android:name=".SimpleIME"
+    android:label="@string/simple_ime"
+    android:permission="android.permission.BIND_INPUT_METHOD"
+    >
+    <meta-data android:name="android.view.im" android:resource="@xml/method"/>
+    <intent-filter>
+        <action android:name="android.view.InputMethod" />
+    </intent-filter>            
+    </service>
+
+    </application>
+
+</manifest>
+

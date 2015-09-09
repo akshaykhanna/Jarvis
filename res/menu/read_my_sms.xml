@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    
+    >
+   
+   
+     
+    
+      <item
+        android:id="@+id/action_Devloper"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+       
+       android:title="Developer"
+       />
+      
+       <item
+        android:id="@+id/action_Rate"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+       
+        android:title="Rate Us"/>
+
+</menu>
